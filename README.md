@@ -1,5 +1,8 @@
 # grpc-example-python
 
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=filfreire%2Fgrpc-example-python&uri=https%3A%2F%2Fraw.githubusercontent.com%2Ffilfreire%2Fgrpc-example-python%2Fmain%2Fgrpc_insomnia.json)
+
+
 > This is an experimental repo, it was heavily adapted from https://grpc.io/docs/languages/python/quickstart/ - the equivalent proto files have already been compiled and were placed here "as is"
 
 ## How to build
