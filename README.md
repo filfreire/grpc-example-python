@@ -7,12 +7,17 @@ A Docker-based grpc python example.
 
 > This is an experimental repo, it was heavily adapted from https://grpc.io/docs/languages/python/quickstart/ - the equivalent proto files have already been compiled and were placed here "as is"
 
-## How to build
+## How to build and run
 
 1. Clone the repo.
 2. Install [Docker](https://docs.docker.com/get-docker/)
 3. Run `make build` or `docker build --tag grpc-example:latest .`.
 4. Run `make run` or `docker run -it --rm -p 50051:50051 --name grpc-example grpc-example:latest`.
+
+If all goes well you should see:
+```shell
+Server listening at '0.0.0.0:50051'
+```
 
 ## How to test
 
