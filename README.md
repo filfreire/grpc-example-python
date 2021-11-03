@@ -3,13 +3,16 @@
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=filfreire%2Fgrpc-example-python&uri=https%3A%2F%2Fraw.githubusercontent.com%2Ffilfreire%2Fgrpc-example-python%2Fmain%2Fgrpc_insomnia.json)
 
 
+A Docker-based grpc python example.
+
 > This is an experimental repo, it was heavily adapted from https://grpc.io/docs/languages/python/quickstart/ - the equivalent proto files have already been compiled and were placed here "as is"
 
 ## How to build
 
 1. Clone the repo.
-2. Build the docker container with `docker build --tag grpc-example:latest .`.
-3. Run `docker run -it --rm -p 50051:50051 --name grpc-example grpc-example:latest`.
+2. Install [Docker](https://docs.docker.com/get-docker/)
+3. Run `make build` or `docker build --tag grpc-example:latest .`.
+4. Run `make run` or `docker run -it --rm -p 50051:50051 --name grpc-example grpc-example:latest`.
 
 ## How to test
 
