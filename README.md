@@ -11,8 +11,9 @@ A Docker-based grpc python example.
 
 1. Clone the repo.
 2. Install [Docker](https://docs.docker.com/get-docker/)
-3. Run `make build` or `docker build --tag grpc-example:latest .`.
-4. Run `make run` or `docker run -it --rm -p 50051:50051 --name grpc-example grpc-example:latest`.
+3. Run `make build-proto` to build the protobuf definitions.
+4. Run `make build` or `docker build --tag grpc-example:latest .`.
+5. Run `make run` or `docker run -it --rm -p 50051:50051 --name grpc-example grpc-example:latest`.
 
 If all goes well you should see:
 ```shell
@@ -25,7 +26,7 @@ Import the [Insomnia collection](./grpc_insomnia.json) on this repo.
 
 ## Other notes
 
-To compile the proto files from the original repo run:
+You can compile the protobuf definitions that are on `proto/` folder by running `make build-proto`. Otherwise, to compile the proto files from the original repo run:
 ```
 python -m grpc_tools.protoc -I../../protos --python_out=. --grpc_python_out=. ../../protos/helloworld.proto
 
