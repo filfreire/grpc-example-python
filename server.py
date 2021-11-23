@@ -57,7 +57,12 @@ class Greeter(helloworld_pb2_grpc.GreeterServicer):
     def SayHello(self, request, context):
         if self._should_suppress_compression():
             context.set_response_compression(grpc.Compression.NoCompression)
-        return helloworld_pb2.HelloReply(message='Hello, %s!' % request.name)
+        print(str(context.invocation_metadata()))
+        return helloworld_pb2.HelloReply(
+            message='Hello test, %s!' % request.name,
+            request_metadata=str(context.invocation_metadata()),
+            request_body=str(request)
+        )
 
 
 def run_server(server_compression, no_compress_every_n, port):

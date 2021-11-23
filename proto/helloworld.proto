@@ -37,4 +37,6 @@ message HelloRequest {
 // The response message containing the greetings
 message HelloReply {
   string message = 1;
+  string request_metadata = 2;
+  string request_body = 3;
 }
