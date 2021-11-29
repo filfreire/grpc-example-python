@@ -20,6 +20,16 @@ If all goes well you should see:
 Server listening at '0.0.0.0:50051'
 ```
 
+### Build and run `route_guide` example
+
+In this repo you can also find of the original gRPC *Route guide* [example](https://github.com/grpc/grpc/tree/v1.41.0/examples/python/route_guide) from the [gRPC Basics python tutorial](https://grpc.io/docs/languages/python/basics/).
+
+1. Clone the repo.
+2. Install [Docker](https://docs.docker.com/get-docker/)
+3. Change to `route_guide/` folder (e.g. `cd route_guide`)
+4. Run `make build`
+5. Run `make run`
+
 ## How to test
 
 Import the [Insomnia collection](./grpc_insomnia.json) on this repo. You can import by URL using `https://raw.githubusercontent.com/filfreire/grpc-example-python/main/grpc_insomnia.json`.
