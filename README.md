@@ -27,7 +27,7 @@ Server listening at '0.0.0.0:50051'
 
 In this repo you can also find of the original gRPC *Route guide* [example](https://github.com/grpc/grpc/tree/v1.41.0/examples/python/route_guide) from the [gRPC Basics python tutorial](https://grpc.io/docs/languages/python/basics/).
 
-To build the `route_guide` example (which only has Unary, client server and bidirectional streams examples):
+To build the `route_guide` example (which has Unary, client server and bidirectional streams examples):
 
 1. Clone the repo.
 2. Install [Docker](https://docs.docker.com/get-docker/)
