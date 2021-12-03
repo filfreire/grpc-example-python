@@ -37,7 +37,7 @@ To build the `route_guide` example (which has Unary, client server and bidirecti
 
 ## How to test
 
-Import the [Insomnia collection](./grpc_insomnia.json) on this repo. You can import by URL using `https://raw.githubusercontent.com/filfreire/grpc-example-python/main/grpc_insomnia.json`.
+Import the [Insomnia collection](insomnia://app/import?uri=https://raw.githubusercontent.com/filfreire/grpc-example-python/main/grpc_insomnia.json) on this repo, `https://raw.githubusercontent.com/filfreire/grpc-example-python/main/grpc_insomnia.json`
 
 ## Other notes
 
