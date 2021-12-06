@@ -62,6 +62,7 @@ class RouteGuideServicer(route_guide_pb2_grpc.RouteGuideServicer):
         self.db = route_guide_resources.read_route_guide_database()
 
     def GetFeature(self, request, context):
+        print(str(context.invocation_metadata()))
         feature = get_feature(self.db, request)
         if feature is None:
             return route_guide_pb2.Feature(name="", location=request)
@@ -69,6 +70,7 @@ class RouteGuideServicer(route_guide_pb2_grpc.RouteGuideServicer):
             return feature
 
     def ListFeatures(self, request, context):
+        print(str(context.invocation_metadata()))
         left = min(request.lo.longitude, request.hi.longitude)
         right = max(request.lo.longitude, request.hi.longitude)
         top = max(request.lo.latitude, request.hi.latitude)
@@ -81,6 +83,7 @@ class RouteGuideServicer(route_guide_pb2_grpc.RouteGuideServicer):
                 yield feature
 
     def RecordRoute(self, request_iterator, context):
+        print(str(context.invocation_metadata()))
         point_count = 0
         feature_count = 0
         distance = 0.0
@@ -102,6 +105,7 @@ class RouteGuideServicer(route_guide_pb2_grpc.RouteGuideServicer):
                                             elapsed_time=int(elapsed_time))
 
     def RouteChat(self, request_iterator, context):
+        print(str(context.invocation_metadata()))
         prev_notes = []
         for new_note in request_iterator:
             for prev_note in prev_notes:
