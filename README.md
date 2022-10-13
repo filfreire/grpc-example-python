@@ -33,7 +33,7 @@ To run the `route_guide` example (which has Unary, client server and bidirection
 2. Install [Docker](https://docs.docker.com/get-docker/)
 3. Change to `route_guide/` folder (e.g. `cd route_guide`)
 4. (Optional) Run `make build`
-5. Run `make run` or `docker run -it --rm -p 50051:50051 --name helloworld filfreire/grpc-example-routeguide:latest`.
+5. Run `make run` or `docker run -it --rm -p 50051:50051 --name routeguide filfreire/grpc-example-routeguide:latest`.
 
 ## How to test
 
