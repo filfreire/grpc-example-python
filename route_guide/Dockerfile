@@ -2,7 +2,7 @@ FROM python:3.9-slim
 
 RUN apt-get -y update
 RUN python3 -m pip install --upgrade pip
-RUN python3 -m pip install grpcio grpcio-tools protobuf
+RUN python3 -m pip install grpcio grpcio-tools protobuf==3.20.*
 
 COPY . /app/
 

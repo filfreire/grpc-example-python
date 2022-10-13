@@ -6,16 +6,16 @@ A Docker-based grpc python example.
 
 > This is an experimental repo, it was heavily adapted from https://grpc.io/docs/languages/python/quickstart/ - the equivalent proto files have already been compiled and were placed here "as is"
 
-## How to build and run
+## How to run
 
 ### `helloworld` example
 
-To build the `helloworld` example (which only has simple Unary request):
+To run the `helloworld` example (which only has simple Unary request):
 
 1. Clone the repo.
 2. Install [Docker](https://docs.docker.com/get-docker/)
-3. Run `make build` or `docker build --tag grpc-example:latest .`.
-4. Run `make run` or `docker run -it --rm -p 50051:50051 --name grpc-example grpc-example:latest`.
+3. (Optional) Run `make build` or `docker build --tag filfreire/grpc-example-helloworld:latest .`.
+4. Run `make run` or `docker run -it --rm -p 50051:50051 --name helloworld filfreire/grpc-example-helloworld:latest`.
 
 If all goes well you should see:
 
@@ -23,17 +23,17 @@ If all goes well you should see:
 Server listening at '0.0.0.0:50051'
 ```
 
-### `route` example
+### `route_guide` example
 
 In this repo you can also find of the original gRPC *Route guide* [example](https://github.com/grpc/grpc/tree/v1.41.0/examples/python/route_guide) from the [gRPC Basics python tutorial](https://grpc.io/docs/languages/python/basics/).
 
-To build the `route_guide` example (which has Unary, client server and bidirectional streams examples):
+To run the `route_guide` example (which has Unary, client server and bidirectional streams examples):
 
 1. Clone the repo.
 2. Install [Docker](https://docs.docker.com/get-docker/)
-3. Change to `route_example/` folder (e.g. `cd route_example`)
-4. Run `make build`
-5. Run `make run`
+3. Change to `route_guide/` folder (e.g. `cd route_guide`)
+4. (Optional) Run `make build`
+5. Run `make run` or `docker run -it --rm -p 50051:50051 --name helloworld filfreire/grpc-example-routeguide:latest`.
 
 ## How to test
 
@@ -48,7 +48,7 @@ In case you edited any of the `.proto` files in this repo, you can run `make bui
 1. Install [protobuf compiler](https://grpc.io/docs/protoc-installation/)
 2. Install `grpcio`, `grpcio-tools` using `pip`. (e.g. `sudo pip3 install grpcio grpcio-tools`
 
-### Compile original protobuf definitions 
+### Compile original protobuf definitions
 
 To compile the proto files from the original repo:
 

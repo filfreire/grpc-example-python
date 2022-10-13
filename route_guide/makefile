@@ -1,9 +1,13 @@
 container_version := latest
-container_name := filfreire/grpc-example-python-route-guide
+container_name := filfreire/grpc-example-routeguide
 
 build:
 	@clear
 	DOCKER_BUILDKIT=1 docker build --tag ${container_name}:${container_version} .
+
+push:
+	@clear
+	docker push ${container_name}:${container_version}
 
 build-proto:
 	@clear
